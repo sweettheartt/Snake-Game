@@ -2,11 +2,11 @@
 
 # Snake Game 🐍 - Jogo da Cobrinha
 
-Bem-vindo ao Snake Game, um clássico jogo da cobrinha modernizado e desenvolvido com diferentes níveis de dificuldade: Noob, Player, Pro e Best BR! Este projeto foi criado com paixão por [sweetheart] e proporciona uma experiência divertida e desafiadora para jogadores de todas as habilidades.
+Bem-vindo ao Snake Game, um clássico jogo da cobrinha modernizado e adaptado para mobile desenvolvido com diferentes níveis de dificuldade: Noob, Player, Pro e Best BR! Este projeto foi criado com paixão por sweetheart e proporciona uma experiência divertida e desafiadora para jogadores de todas as habilidades.
 
 🎮 Sobre o Jogo
 
-O Snake Game é uma versão aprimorada do famoso jogo da cobrinha, onde o jogador controla uma serpente que se move pelo tabuleiro em busca de comida. À medida que a cobra come, ela cresce, e o desafio aumenta!
+Com suporte a celular com Touch Drag juntamente com suporte ao teclado,o Snake Game é uma versão aprimorada do famoso jogo da cobrinha, onde o jogador controla uma serpente que se move pelo tabuleiro em busca de comida. À medida que a cobra come, ela cresce, e o desafio aumenta!
 
 Modos de Dificuldade
 
