@@ -1,6 +1,6 @@
----
 
-Snake Game 🐍 - Jogo da Cobrinha
+
+# Snake Game 🐍 - Jogo da Cobrinha
 
 Bem-vindo ao Snake Game, um clássico jogo da cobrinha modernizado e desenvolvido com diferentes níveis de dificuldade: Noob, Player, Pro e Best BR! Este projeto foi criado com paixão por [sweetheart] e proporciona uma experiência divertida e desafiadora para jogadores de todas as habilidades.
 
@@ -65,6 +65,3 @@ Este projeto está sob a licença MIT.
 ✨ Créditos
 
 Desenvolvido por sweetheart com o intuito de trazer diversão e nostalgia aos jogadores.
-
-
----
