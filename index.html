@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu" class="screen">
+    <div class="title-container">
+        <h1>Snake Game</h1>
+        <div class="snake-icon">🐍</div>
+        <div id="highScore">Recorde: 0</div>
+    </div>
+    <div class="button-container">
+        <button id="playButton">Jogar</button>
+        <button id="creditsButton">Créditos</button>
+    </div>
+</div>
+
+    <div id="difficultySelect" class="screen">
+    <div class="popup">
+        <h2>Selecione a Dificuldade</h2>
+        <div class="difficulty-wrapper">
+            <div class="difficulty-options">
+                <div class="difficulty-option" data-difficulty="noob">
+                    <h3>Noob</h3>
+                    <p>Fácil demais</p>
+                </div>
+                <div class="difficulty-option" data-difficulty="player">
+                    <h3>Player</h3>
+                    <p>Desafio normal</p>
+                </div>
+                <div class="difficulty-option" data-difficulty="pro">
+                    <h3>Pro</h3>
+                    <p>Muito difícil</p>
+                </div>
+                <div class="difficulty-option" data-difficulty="bestbr">
+                    <h3>Best BR</h3>
+                    <p>Quase Impossível</p>
+                </div>
+            </div>
+        </div>
+        <button id="backToDifficultyMenu">Voltar</button>
+    </div>
+</div>
+
+    <div id="game" class="screen">
+    <div class="game-container">
+            <button id="pauseBtn">
+                <i class="fas fa-pause"></i>
+            </button>
+            <div id="score">Pontos: 0</div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+    </div>
+</div>
+
+    <div id="pause" class="screen">
+        <div class="popup">
+            <h2>Jogo Pausado</h2>
+            <p>Pontuação atual: <span id="pauseScore">0</span></p>
+            <button id="continueButton">Continuar</button>
+        </div>
+    </div>
+
+    <div id="credits" class="screen">
+        <div class="popup">
+            <h2>Créditos</h2>
+            <p>Developing by sweetheart</p>
+            <button id="backButton">Voltar</button>
+        </div>
+    </div>
+
+    <div id="gameOver" class="screen">
+        <div class="popup">
+            <h2>Game Over</h2>
+            <p>Pontuação: <span id="finalScore">0</span></p>
+            <button id="playAgainButton">Jogar Novamente</button>
+            <button id="menuButton">Menu Principal</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

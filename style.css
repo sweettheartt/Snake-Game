@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+:root {
+    --primary-bg: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    --primary-blue: #00b4db;
+    --secondary-blue: #0083b0;
+    --dark-overlay: rgba(0,0,0,0.8);
+    --light-overlay: rgba(0,0,0,0.5);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--primary-bg);
+    touch-action: none;
+    overflow: hidden;
+}
+
+/* Telas e Layout Geral */
+.screen {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.screen[style*="display: block"] {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Seleção de Dificuldade */
+.difficulty-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.difficulty-option {
+    flex: 1;
+    padding: 20px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+}
+
+.difficulty-option.active {
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0,180,219,0.5);
+    background: rgba(0,180,219,0.2);
+}
+
+.difficulty-option h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.difficulty-option p {
+    color: var(--primary-blue);
+    font-size: 12px;
+}
+
+/* Elementos de Jogo */
+#game {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+#pauseBtn {
+    position: fixed; /* Mudança de absolute para fixed */
+    top: 20px; /* Alinhado ao topo */
+    left: 20px; /* No canto esquerdo */
+    background: var(--light-overlay);
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    z-index: 200; /* Garante que fique sobre outros elementos */
+}
+
+#score {
+    position: fixed; /* Mudança de absolute para fixed */
+    top: 20px; /* Alinhado ao topo */
+    right: 20px; /* No canto direito */
+    background: var(--light-overlay);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    z-index: 200; /* Garante que fique sobre outros elementos */
+}
+
+#gameCanvas {
+    max-width: 100%;
+    border: 3px solid #30475e;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,180,219,0.5);
+    background: linear-gradient(45deg, #222831, #30475e);
+}
+
+/* Botões */
+.button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background: linear-gradient(45deg, var(--primary-blue), var(--secondary-blue));
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Títulos e Textos */
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+h2 {
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+#credits .popup p {
+    color: var(--primary-blue); /* Usa a cor azul primária do jogo */
+    margin-bottom: 10px; /* Opcional: adiciona um espaçamento */
+}
+
+#credits .popup p:first-of-type {
+    color: white; /* Mantém o primeiro parágrafo (nome) branco */
+}
+
+/* Recorde */
+#highScore {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--primary-blue);
+    font-size: 16px;
+}
+
+/* Popup */
+.popup {
+    background: rgba(0,0,0,0.9);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 90%;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Animações */
+@keyframes glow {
+    from { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ff; }
+    to { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0ff; }
+}
+
+.snake-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Pontuação em Popups */
+#pauseScore, 
+#finalScore {
+    font-size: 1.5em;
+    color: var(--primary-blue);
+    margin: 15px 0;
+}
