@@ -1,0 +1,8 @@
+{
+  "name": "Snake Game",
+  "short_name": "Snake Game",
+  "start_url": "/index.html",
+  "display": "fullscreen",
+  "background_color": blue,
+  "theme_color": white
+}
